@@ -1,0 +1,22 @@
+create database shopping;
+use shopping;
+create table products(pid int primary key, pname varchar(50), price int);
+ insert into products values(1, 'Reynolds 405_Faisal', 8);
+ insert into products values(2, 'HB Draw Pencil_Faisal', 10);
+ insert into products values(3, 'Crayons Rainbow_Faisal', 12);
+ insert into products values(4, 'Notebook_Faisal', 14);
+ insert into products values(5, 'Draw Sheet_Faisal', 16);
+ insert into products values(6, 'Brush Air_Faisal', 5);
+ select *from products;
+ 
+create table cart(pid int primary key, qty int);
+insert into cartdata values(6,5);
+insert into cartdata values(1,4);
+insert into cartdata values(2,2);
+insert into cartdata values(3,4);
+
+Question-> Find out the total price to be paid at the time of check out.
+
+Query to calculate Total Amount:
+select sum(qty*price) from cart,products where cart.pid=products.pid;
+
