@@ -19,4 +19,8 @@ Question-> Find out the total price to be paid at the time of check out.
 
 Query to calculate Total Amount:
 select sum(qty*price) from cart,products where cart.pid=products.pid;
-
++----------------+
+| sum(qty*price) |
++----------------+
+|            125 |
++----------------+
